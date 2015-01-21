@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 jQuery(function($){
 	//都道府県のリストがchangeで発動
