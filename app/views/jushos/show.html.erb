@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Todofuken:</strong>
+	<%= @jusho.todofuken.name %>
+</p>
+
+<p>
+  <strong>Shichoson:</strong>
+	<%= @jusho.shichoson.name %>
+</p>
+
+<p>
+  <strong>Sonotajusho:</strong>
+  <%= @jusho.sonotajusho %>
+</p>
+
+<%= link_to 'Edit', edit_jusho_path(@jusho) %> |
+<%= link_to 'Back', jushos_path %>

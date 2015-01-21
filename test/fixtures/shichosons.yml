@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  todofuken_id: 
+  name: MyString
+
+two:
+  todofuken_id: 
+  name: MyString

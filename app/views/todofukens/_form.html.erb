@@ -1,0 +1,21 @@
+<%= form_for(@todofuken) do |f| %>
+  <% if @todofuken.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@todofuken.errors.count, "error") %> prohibited this todofuken from being saved:</h2>
+
+      <ul>
+      <% @todofuken.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

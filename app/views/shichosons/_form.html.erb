@@ -1,0 +1,25 @@
+<%= form_for(@shichoson) do |f| %>
+  <% if @shichoson.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shichoson.errors.count, "error") %> prohibited this shichoson from being saved:</h2>
+
+      <ul>
+      <% @shichoson.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :todofuken_id %><br>
+    <%= f.text_field :todofuken_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

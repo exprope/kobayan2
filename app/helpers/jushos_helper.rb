@@ -1,0 +1,2 @@
+module JushosHelper
+end

@@ -1,0 +1,29 @@
+<%= form_for(@jusho) do |f| %>
+  <% if @jusho.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@jusho.errors.count, "error") %> prohibited this jusho from being saved:</h2>
+
+      <ul>
+      <% @jusho.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :todofuken %><br />
+    <%= f.collection_select(:todofuken_id, Todofuken.all, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :shichoson %><br />
+    <%= render 'todofuken_select', {:f => f} %>
+  </div>
+  <div class="field">
+    <%= f.label :sonotajusho %><br />
+    <%= f.text_field :sonotajusho %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
